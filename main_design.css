@@ -1,0 +1,442 @@
+*{
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+/************* NAVIGATION ****************/
+#homepage{
+  position: absolute;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align:center;
+  vertical-align: middle;
+}
+
+.nav-toggle {
+  color: #000;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+nav, .custom-navbar {
+  margin: 0;
+  display: flex;
+  justify-content:space-between;
+  width: 100%;
+  padding-left: 20px; 
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  
+  font-weight: normal;
+}
+
+.additional{
+  background: #fdfdfd;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1) ;
+  transition: box-shadow 0.2s ease;
+}
+.custom-navbar{
+  align-items: center; /* This aligns ALL children vertically */
+}
+/* Fade-out animation */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.top-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+}
+ul li {
+  display: inline-block;
+  margin: 20px;
+  
+  border-radius: 5px;
+  height: 40px;
+  
+}
+.top-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 200;
+  font-size: 20px;
+  padding: 10px;
+  display: block;
+  
+}
+.custom-navbar{
+  align-items: center; /* This aligns ALL children vertically */
+}
+/*Navbar shadpw*/
+.additional{
+  background-color: #f9ed81;
+
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1) ;
+  transition: box-shadow 0.5s ease;
+}
+
+/*                        Navgation toggle sign                        */
+
+label{
+  display:flex;
+   flex-direction:column;
+   width:70px;
+   cursor:pointer;
+   scale: 0.55;
+   margin-right: -30px;
+ }
+
+label span{
+   background: #000000;
+   border-radius:10px;
+   height:5px;
+   margin: 7px 0;
+   transition: .4s  cubic-bezier(0.38, -0.1, 0.32, 1);
+ 
+ }
+
+span:nth-of-type(1){
+   width:50%;
+   
+ }
+
+span:nth-of-type(2){
+   width:100%;
+ }
+
+span:nth-of-type(3){
+   width:75%;
+ }
+
+input[type="checkbox"]{
+   display:none;
+ }
+
+ input[type="checkbox"]:checked ~ span:nth-of-type(1){
+   transform-origin:bottom;
+   transform:rotatez(45deg) translate(8px,0px)
+ }
+
+input[type="checkbox"]:checked ~ span:nth-of-type(2){
+   transform-origin:top;
+   transform:rotatez(-45deg)
+ }
+
+ input[type="checkbox"]:checked ~ span:nth-of-type(3){
+   
+   transform-origin:bottom;
+   width:50%;
+   transform: translate(30px,-11px) rotatez(45deg);
+ 
+ }
+ /*                        Navgation toggle sign                        */
+
+/************* NAVIGATION ****************/
+
+/*** Seperate pages ***/
+.main-container{
+  width: 100%;
+  height: 100vh;
+}
+
+.slides{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7eb87;
+  position: relative;
+  
+  
+}
+
+
+
+/*** Landing Page ***/
+.landing-txt{
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  text-align: center;
+  font-weight:300;
+  padding: 2em;
+  /* border: solid  2px black; */
+  width: 80%;
+  
+}
+
+#arrow_s{
+  display:inline-flexbox;
+  margin: 0;
+  /*border: solid 2px red;*/
+  width: 100%;
+  padding-left: 100px;
+        height: 200px;
+        margin: -90px 0 0px  -100px;
+        object-fit:fill;
+  
+       
+}
+
+
+
+
+.ct-box{
+  /* border: solid 2px red; */
+  padding: 2px;
+}
+
+
+
+
+/***Second page**/
+
+#description-txt{
+  padding: 3em;
+  font-size: clamp(15px, 2.5vw, 30px);
+  
+}
+/**** Scrolling pART *****/
+img{
+  width: 10em;
+  height: auto;
+}
+
+#scrolling-container{
+  padding-block: 8px;
+  border-block: 1px solid; 
+  overflow: hidden;
+  user-select: none;
+  --gap : 20px;
+  gap: var(--gap);
+}
+
+.scrolling-track{
+  display: flex;
+  gap: (--gap)
+
+}
+
+.logo-set{
+  flex-shrink: 0;
+  padding-right: 50px;
+  min-width: 100%;
+  justify-content: space-between ;
+  align-items: center;
+  gap: var(--gap);
+  animation: scroll 20s linear infinite;
+
+}
+
+#selected_works{
+  display: flex;
+}
+li{
+  justify-content: space-between;
+}
+
+@keyframes scroll {
+  to{
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+
+
+
+/** Selected wORKS Page https://freefrontend.com/css-lists/  **/
+#project_nav{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  align-items: flex-start;
+  justify-content: space-between;
+  left: 0px;
+  top: 0px;
+  
+  padding: clamp(1rem, 5vw, 6rem);
+  height: 80%;
+  width: 100%;
+  box-sizing: border-box;
+ 
+  
+}
+
+#project_nav > a {
+  color: rgba(255, 255, 255, 0.505);
+  font-size: 3rem;
+  font-weight: 300;
+  text-decoration: none;
+  position: relative;
+  display: block;   
+  width: 100%;  
+ 
+
+}
+#project_nav > a:hover {
+  color: #E26274;
+  
+}
+
+#project_nav > a > span {
+  border-bottom: 1px solid transparent;
+  padding-top: 2rem ;
+  padding-bottom: 2rem ;
+  border-top: 1px solid transparent;
+  position: relative;
+  z-index: 2;
+  display: block;   
+  width: 100%;   
+  display: flex;   
+  justify-content: space-between; 
+}
+
+
+
+#project_nav > a:hover > span {  
+  border-top-color: black;
+  border-bottom-color: black;
+  
+}
+
+#project_nav > a >  #proj_item {
+  position: absolute;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: transform 250ms, opacity 250ms;
+  pointer-events: none;
+  width: min(40vw, 500px);
+}
+
+#project_nav > a:hover >  #proj_item {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+} 
+
+.proj_catergory{
+  font-size: 1.5rem;
+}
+
+#final_slide{
+  align-items:flex-start;
+  justify-content:center;
+}
+
+/*Entire page responsive design */
+@media only screen and (max-width: 900px) {
+
+  #homepage{
+    position: relative;
+   
+  background-color: none;
+  box-shadow: none; 
+  }
+
+  .top-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+   
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+  }
+
+  .nav-toggle {
+    display: block;
+    padding-right: 50px; 
+  }
+
+  .navbar{
+    position: fixed;
+    
+  }
+
+  .custom-navbar {
+    margin-bottom: 20px;
+    
+    
+  }
+
+  /* Navigation Bar */
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    
+    
+  }
+
+  .navbar {
+    background-color: white;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding-left: 20px; 
+    
+  }
+
+  ul li {
+  display: inline-block;
+  margin: 20px;
+  background-color: none;
+  box-shadow: none ;
+  border-radius: 5px;
+  height: 40px;
+}
+
+  .show-links {
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  .top-links a {
+    color: #333;
+    font-size: 20px;
+    display: block;
+    padding: 0.75rem 1rem; 
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+ 
+  .top-links a:hover {
+    background-color: #ffe2e2;
+    padding-left: 1.5rem;
+  }
+
+  ul li {
+    margin: 0;
+    display: block;
+  }
+  
+  /* Add padding at the top to account for fixed navbar */
+  .section:first-of-type {
+    padding-top: 100px;
+  }
+
+}
+

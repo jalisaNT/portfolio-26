@@ -1,7 +1,40 @@
 const nav_section = document.querySelector(".container-fluid");
 const navToggle = document.getElementById("check");
-
+const cursor = document.querySelector(".cursor");
+const hover_cursor = document.querySelector(".select");
 const scroll_nav_bar = document.querySelector(".custom-navbar");
+
+//Cursor 
+document.addEventListener("mousemove", (event) => {
+  const {width, height} = cursor.getBoundingClientRect();
+  cursor.style.left =`${event.clientX - width / 2}px`;
+  cursor.style.top =`${event.clientY - height / 2}px`;
+  hover_cursor.style.left =`${event.clientX - width / 2}px`;
+  hover_cursor.style.top =`${event.clientY - height / 2}px`;
+});
+
+
+const clickableElements = document.querySelectorAll('a, button');
+
+// Loop through them
+clickableElements.forEach(element => {
+    element.addEventListener('mouseenter', function() {
+        //cursor.style.display = `none`
+        console.log('Clicked:', this);
+        cursor.style.display =`none`
+         hover_cursor.style.display =`block`
+    });
+
+    element.addEventListener('mouseleave', function() {
+        //cursor.style.display = `none`
+        cursor.style.display =`block`
+         hover_cursor.style.display =`none`
+        
+    });
+
+
+   
+});
 
 console.log(nav_section);
 console.log(window.innerWidth);

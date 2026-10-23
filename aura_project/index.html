@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+  <!-- G Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Cal+Sans&family=Overpass:ital,wght@0,100..900;1,100..900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="aura_design.css">
+  <title>Document</title>
+</head>
+<body>
+  
+    <!--Navigate-->
+   <nav class="navbar custom-navbar">
+    <a href="../index.html" id="homepage">Home</a>
+    <button class="nav-toggle">
+      <!--I tag : italics. fas and fa bars are two classes
+      fas is a font style icon. fa-bars is menu toggle. hamburger menu  <i class="fas fa-bars"></i>-->
+      <label for="check">
+        <input type="checkbox" id="check"/> 
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </button>
+    <div class="container-fluid justify-content-end class"></div>
+  </nav>
+
+  <section class="main-c">
+    <div class="top-image">
+       <video id="full_view" autoplay loop muted>
+        <source src="../images/project_icons/pp5.mp4" type="video/mp4"/>
+      </video>
+      
+    </div>
+    <section class="intro-container">
+       <div id="left-side"></div>
+      <article id="right-side">
+        <h1>Aura Blooms</h1>
+        <p id="brief"> is a Snapchat lens that explores themes of emotional energy and building spaces with communities in mind, as it impacts the energy and feelings of people. Built using Lens Studio, the audience can view the energy they exude onto the space around them.
+           The augmented reality (AR) tracks the user’s feet, surrounding them with blooming flowers and vivid visuals that follow their every step. Built project during Snap Lens Lab X RCA Programme  </p>
+        <div class="line"></div>
+
+        <section id = "tools">
+          <h3>Duration</h3>   
+          <p> 28 July 2025 -  13 August 2025</p>
+        </section>
+
+        <section id = "tools">
+          <h3>Tools</h3>
+          <p>Lens Studio, Blender, Supersplat, PolyCam</p>
+        </section>
+
+        <section id = "tools">
+          <h3>Category</h3>
+          <p>Augmented Reality, 3D Models, 3D Gaussian Splats</p>
+        </section>
+
+         <section id = "tools">
+          <h3>Collaborators</h3>
+          <p>Adaora Williams, Asya Ally</p>
+        </section>
+
+        <section id = "tools">
+          <h3>Role </h3>
+          <p>Builder / Creative Technologist : My role was to build the interactive lens from scratch and scan, edit, and curate 3D models and animations in Blender.</p>
+        </section>
+         
+    </section>
+
+    <section class="container"  id="row-one">
+      <!-- Autoplay + mute on loop video-->
+      <video id="R_full_video" autoplay loop muted>
+        <source src="../images/standing.mov" type="video/mp4"/>
+      </video>
+    </section>
+
+     <div id="r-explain">
+      <h2>Process</h2>
+      <p id="txt">
+        Scanned 3D models of local flowers and created additional modeled + animated assets in Blender. 
+        Using Snapchat’s AR Fashion Shoe Lens template, I removed the default shoes and UI elements, retaining only the foot recognition
+         and attachment functionality. Two planes were attached to the bottom of the feet, and the previously created assets were organised within the scene
+         . Animations of scaling (increasing and decreasing size) were applied to select assets to simulate a natural growing effect at different rates.
+       
+      </p>
+    </div>
+
+    <div id="r-explain">
+      <div id="context"><p></p></div>
+      <div class="container_mid">
+        <video class="more-media" autoplay loop muted><source src="../images/aurab_vid.MP4" type="video/mp4"/></video>
+        <img src="../images/aurab.JPG" class="more-media" >
+         <video class="more-media" autoplay loop muted><source src="../images/aurab_vid_2.MP4" type="video/mp4"/></video>
+      </div>
+      
+      
+    </div>
+
+    <div id="r-explain">
+      <h2>Challenges & Solutions</h2>
+      <p id="txt">As this was my first experience using Lens Studio, one key lesson I learned was the importance of compressing all assets to ensure the lens is publishable on Snapchat. The lens must be under 8MB, but near the end of production, I realised the file size was massively over the limit.
+Even though I had compressed assets during import stage, such as 3D models from Blender and exported Gaussian splats from 3D scans — the file size remained too large. Through further research, I discovered that Gaussian splats take a lot of storage space due to the extra noise, splats, and nodes surrounding the visible model.
+To fix this, I used an external tool called Supersplat and  removed/edited unnecessary nodes without affecting the model itself. After this process, the lens size was reduced enough to become publishable on Snapchat.
+
+       
+      </p>
+    </div>
+    
+  </section>
+</body>
+<script src="../dating_project/dating_main.js"></script>
+
+</html>

@@ -1,0 +1,84 @@
+<!--NTS : 
+* Add two buttons on side and swipe left + right. (2)format  (3)Links
+
+* Add R&R with process section
+
+* Design the layout for work section on homa page and clickable link
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Downloads-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet"  href="a_style.css">
+  
+
+  <!-- G Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Cal+Sans&family=Overpass:ital,wght@0,100..900;1,100..900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+  <!-- for navigation -->
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <title>Document</title>
+</head>
+<body>
+    <!--Navigate-->
+    <nav class="navbar custom-navbar">
+    <a href="../index.html" id="homepage">Home</a>
+    <button class="nav-toggle">
+      <!--I tag : italics. fas and fa bars are two classes
+      fas is a font style icon. fa-bars is menu toggle. hamburger menu  <i class="fas fa-bars"></i>-->
+      <label for="check">
+        <input type="checkbox" id="check"/> 
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </button>
+    <div class="container-fluid justify-content-end class"></div>
+  </nav>
+  <!--Card section-->
+  <section class="container pt-5 my-5">
+    <section class="organisation">
+      <button class="js-left-trigger" id="left-btn">Swipe Left <br> No Thank you</button>
+      <button class="js-right-trigger" id="right-btn">Swipe Right <br> Yay Get in Touch</button>
+    </section>
+   <!-- <section id="indicate">
+      Img from https://handyarrows.com
+      <button class="js-left-trigger"  id="l-btn"><img src="../media/116.svg" width="100" height="100" alt=""></button>
+      <button class="js-right-trigger" id="r-btn"><img src="../media/116.svg" width="100" height="100" alt=""></button>
+    </section>-->
+      <article class="card swipe-effect">
+        <img id="me" src="../images/myself.JPG" alt="photo of curator/owner of portfolio" width="330" height="360" draggable="false">
+        <section id="name-title">
+          <div class="text-bottom">Jalisa . Abeid</div>
+        </section>
+        
+        <section id="mini-icons">
+          <article id="location">
+            <i class="fas fa-map-marker-alt" style="color: #5052c0;"></i>
+            <p>London,UK</p>
+          </article>
+        </section>
+
+        <div id="about-txt">A multidisciplinary coder and designer. Starting from a computer science background, I later moved into the world of creative technology during my time at UAL, where I experimented with new mediums and developed a more design-led approach to working with technology.
+          <br><br>
+          I am very comfortable working with a wide range of different technologies.
+          <br><br>
+          I'm looking to be part of a tech and design-driven team that pushes the boundaries of design and experiential work — a space that brings untold stories to the forefront and truly values the power of storytelling.</div>
+
+      </article>
+  </section>
+  
+</body>
+<script src="a_main.js"></script>
+
+</html>

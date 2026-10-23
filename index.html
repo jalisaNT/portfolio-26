@@ -17,9 +17,23 @@
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="https://unpkg.com/scrollreveal@4"></script>
   <title>Updated Portfolio</title>
+
+   <!--THREJS-->
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+		<script type="importmap">
+			{ 
+				"imports": {
+					"three": "https://threejs.org/build/three.module.js",
+					"three/addons/": "https://threejs.org/examples/jsm/"
+				}
+			}
+		</script>
  
 </head>
 <body>
+  <img class="cursor" src="images/nav_2.PNG">
+  <img class="select" src="images/p3.png">
   <!--Navigation-->
   
   <nav class="navbar custom-navbar">
@@ -38,7 +52,7 @@
     <div class="container-fluid justify-content-end class">
       <ul class="top-links">
         <li>
-          <a href="link/to/page"> About </a>
+          <a href="about_section/index.html"> About </a>
         </li>
         <li>
            <a href="mailto:jalisaabeid44@gmail.com"> Contact </a>
@@ -48,10 +62,13 @@
   </nav>
 
   <!-- Landing Page -->
+   
    <div class="main-container">
 
-   <div class="slides">
-    
+   <div class="slides landing-slide">
+
+    <canvas class="webgl"></canvas>
+
       <div class="landing-txt"> 
       HI I'm Jalisah,  <br>  A
       <span class="ct-box">
@@ -63,10 +80,6 @@
         
       
     </div>
-     
-    
-    
-    
    </div>
 
 
@@ -103,25 +116,27 @@
    <div class="slides" id="final_slide">
     <h1>Selected Work</h1>
     <div id="project_nav">
-      <a href="index.html">
+      <a href="music_code_project/index.html">
         <span>Music X Code  <p class="proj_catergory"> Live Coding | SQLite <br> (2025) </p></span>
-        <img  id="proj_item" src="images/project_icons/dating_poster.jpeg" alt="">
-      </a>
-
-      <a href="index.html">
-        <span>AuraBlooms <p class="proj_catergory"> AR | Snapchat Lens | 3D Modelling <br>(2025) </p></span>
         <video id="proj_item" autoplay loop muted><source src="images/project_icons/new_profile.mp4" alt=""></video>
+        
       </a>
 
-      <a href="index.html">
-        <span>Roots & Resillience <p class="proj_catergory"> AR | Mobile App | 3D Modelling <br>(2025) </p> </span>
-        
+      <a href="aura_project/index.html">
+        <span>AuraBlooms <p class="proj_catergory"> AR | Snapchat Lens | 3D Modelling <br>(2025) </p></span>
         <video id="proj_item" autoplay loop muted><source src="images/project_icons/pp5.mp4" alt=""></video>
       </a>
 
-      <a href="index.html">
+      <a href="r&r_project/index.html">
+        <span>Roots & Resillience <p class="proj_catergory"> AR | Mobile App | 3D Modelling <br>(2025) </p> </span>
+         <img id="proj_item" src="images/project_icons/scrnshot-R&R.png" alt="">
+        
+        
+      </a>
+
+      <a href="dating_project/index.html">
         <span>Dating Manual <p class="proj_catergory"> Illustration | Data Visualisation | Data Analysis <br>(2025) </p></span>
-        <img id="proj_item" src="images/project_icons/scrnshot-R&R.png" alt="">
+       <img  id="proj_item" src="images/project_icons/dating_poster.jpeg" alt="">
       </a>
 
     </div>
@@ -131,8 +146,9 @@
 
   
   </div>
-   <script src="main_haptics.js"></script>
   
+   <script src="main_haptics.js"></script>
+  <script type="module" src="dd.js"></script>
 </body>
 <footer></footer>
 </html>

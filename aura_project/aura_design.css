@@ -1,0 +1,142 @@
+@import url(../r&r_project/R&R_style.css);
+
+*{
+  cursor: default;
+}
+body {
+  margin: 0;
+}
+
+.custom-navbar{
+  background: white;
+}
+
+.additional{
+  box-shadow:none;
+  transition: none;
+}
+
+/*Intro image */
+.custom-navbar {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    
+    z-index: 10; /* Keeps navbar above the image */
+}
+
+/* Intro image - should start from very top */
+.top-image {
+    position: absolute; /* Change back to absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    z-index: 1; /* Behind the navbar */
+}
+
+#full_view {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.intro-container {
+    margin-top: 80vh;
+    position: relative;
+    z-index: 2;
+}
+
+#homepage{
+  margin-left: 30px;
+  background-color: transparent;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px rgb(233, 157, 157); 
+  border-radius: 5px;
+  width: 4em;
+  height: 40px;
+  text-align:center;
+  vertical-align: middle;
+  line-height: 40px;  
+}
+
+/*first row */
+
+#right-side{
+  max-width: 60em;
+}
+
+#left-side {
+  min-width: 40em;
+}
+
+#brief{
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.intro-container{
+   border: none; 
+}
+
+.more-media{
+  flex: 0 0 200px; 
+  height: 500px; 
+  border-radius: 12px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+  /* 
+  border-color: blue;
+  border-width: 10px; */
+ 
+}
+
+.container_mid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  position: relative;
+}
+
+
+
+/* Responsive for tablets */
+@media (max-width: 950px) {
+  .container_mid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 700px;
+    padding: 20px;
+  }
+  
+  .more-media {
+    height: 650px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .container_mid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 550px;
+    padding: 20px;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 500px) {
+  .container_mid {
+    padding: 15px;
+    gap: 15px;
+    max-width: 90%;
+  }
+  
+ 
+}

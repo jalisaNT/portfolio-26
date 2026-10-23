@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+  <!-- G Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Cal+Sans&family=Overpass:ital,wght@0,100..900;1,100..900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="R&R_style.css">
+  <link rel="stylesheet" href="../aura_project/aura_design.css">
+  <title>Document</title>
+</head>
+<body>
+    <!--Navigate-->
+   <nav class="navbar custom-navbar">
+    <a href="../index.html" id="homepage">Home</a>
+    <button class="nav-toggle">
+      <!--I tag : italics. fas and fa bars are two classes
+      fas is a font style icon. fa-bars is menu toggle. hamburger menu  <i class="fas fa-bars"></i>-->
+      <label for="check">
+        <input type="checkbox" id="check"/> 
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </button>
+    <div class="container-fluid justify-content-end class"></div>
+  </nav>
+  <section class="main-c">
+     <div class="top-image">
+       <img src="../images/project_icons/scrnshot-R&R.png" id="full_view">
+      
+    </div>
+    <section class="intro-container">
+       <div id="left-side"></div>
+      <article id="right-side">
+        <h1>Roots & Resilience</h1>
+        <p id="brief"> is an augmented reality app and micro installation that artistically shows the difficulties and discomfort immigrant communities face due to limited access to green spaces; while also celebrating their resilience and ability to cultivate their agriculture within controlled environments. The project investigates the intersection of immigration, cultural heritage, and green space access in the UK, referencing gardens, allotments, and community gardens as vital spaces for growing, gathering, and preserving cultural identity.  </p>
+        <div class="line"></div>
+
+        <section id = "tools">
+          <h3>Duration</h3>   
+          <p>March 2024 – June 2024 </p>
+        </section>
+
+        <section id = "tools">
+          <h3>Tools</h3>
+          <p>Swift, ARKit, Blender and organic materials</p>
+        </section>
+
+        <section id = "tools">
+          <h3>Category</h3>
+          <p>Augmented Reality, Sculptural Microcosm</p>
+        </section>
+        </article>
+    </section>
+    <!--<section class="intro-container">
+      <img id="left-side" src="../media/ar_crop.jpg" alt="image of Roots and Resilience installation">
+      <article id="right-side">
+        <h1>Roots & Resilience</h1>
+        <p id="brief">is an augmented reality app and microcosmic installation that artistically shows the difficulties and discomfort immigrant communities face due to limited access to green spaces; while also celebrating their resilience and ability to cultivate their agriculture within controlled environments.<br> The project investigates the intersection of immigration, cultural heritage, and green space access in the UK, referencing gardens, allotments, and community gardens as vital spaces for growing, gathering, and preserving cultural identity.</p>
+        <div class="line"></div>
+
+        <section id = "time">
+          <h3>Duration</h3>   
+          <p>March 2024 – June 2024</p>
+        </section>
+
+        <section id = "tools">
+          <h3>Tools</h3>
+          <p>Swift, ARKit, Blender and organic materials</p>
+        </section>
+
+        <section id = "category">
+          <h3>Category</h3>
+          <p>Augmented Reality, Sculptural Microcosm</p>
+        </section>
+      </article>
+    </section>-->
+
+    <section class="container"  id="row-one">
+      <!-- Autoplay + mute on loop video-->
+      <video id="R_full_video" autoplay loop muted>
+        <source src="../images/R&R_vid.mp4" type="video/mp4"/>
+      </video>
+      <img id="micro-garden" src="../images/garden.jpg" alt="">
+    </section>
+
+    <div id="r-explain">
+      <h2>User Experience</h2>
+      <p id="r-r-txt">
+        The app introduces the context of the artwork before transitioning to the AR camera view.
+        When the physical installation is detected in-frame, a 3D animation of a chayote, 
+        a vegetable commonly grown in Caribbean cultures, begins to grow. The chayote grows awkwardly and uncomfortably within the confined space, yet ultimately flourishes and expands beyond it.
+        This growth mirrors the immigrant experience: resilience, adaptation, and transformation despite constraint.
+      </p>
+      <h2>Process</h2>
+    </div>
+
+    <section id="row-two">
+      
+          <video autoplay loop muted id="row-two-media">
+            <source src="../images/animationB.mp4" type="video/mp4"/>
+          </video>
+        
+        
+          <img src="../images/garden-process_1.png" id="row-two-media" >
+        
+        
+         <!--  <img src="../media/ux.png"id="row-two-media" >-->
+         <div class="w-100"></div>
+         <img src="../images/ux.png"id="row-two-media" >
+    </section>
+
+    <section id="row-two">
+      
+          
+         <img src="../images/pres1.png" id="row-two-media" >
+        
+          <img src="../images/pres2.png" id="row-two-media" >
+        
+        
+         <!--  <img src="../media/ux.png"id="row-two-media" >-->
+        
+         <img src="../images/pres3.png"id="row-two-media" >
+
+         <img src="../images/pres4.png"id="row-two-media" >
+    </section>
+    
+    <div id="r-explain">
+      <h2>Challenges & Solutions</h2>
+      <p id="txt">
+        One of the main challenges faced was transferring the vertex animations from Blender into Swift/ARKit, as the framework doesn’t natively support Blender’s more fluid or mesh-based animations. ARKit is optimised for performance and primarily supports skeletal or transform-based animations.
+        To overcome this, I exported a series of keyframes as static models and stored them in a list. In the app, I looped through this list to simulate the original animation — effectively recreating a frame-by-frame vertex animation within ARKit.
+      </p>
+    </div>
+    
+  </section>
+</body>
+<script src="R&R_main.js"></script>
+</html>

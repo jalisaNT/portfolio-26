@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--Downloads-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+  <!-- G Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Cal+Sans&family=Overpass:ital,wght@0,100..900;1,100..900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <link rel="stylesheet" href="design.css">
+  <title>Document</title>
+</head>
+<body>
+    <!--Navigate-->
+   <nav class="navbar custom-navbar">
+    <a href="../index.html" id="homepage">Home</a>
+    <button class="nav-toggle">
+      <!--I tag : italics. fas and fa bars are two classes
+      fas is a font style icon. fa-bars is menu toggle. hamburger menu  <i class="fas fa-bars"></i>-->
+      <label for="check">
+        <input type="checkbox" id="check"/> 
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </button>
+    <div class="container-fluid justify-content-end class"></div>
+  </nav>
+
+  <section class="main-c">
+    <div class="top-image">
+       <video id="full_view" autoplay loop muted>
+        <source src="../images/project_icons/new_profile.mp4" type="video/mp4"/>
+      </video>
+      
+    </div>
+    <section class="intro-container">
+       <div id="left-side"></div>
+      <article id="right-side">
+        <h1>Music X Code</h1>
+        <p id="brief"> is a series of performances using Strudel(coding enviroment browser for live music) and Hydra(live code-able video synth).
+         Each performance incorporates voice notes contributed by the current audience, integrating their sounds into the music. 
+          The concept of the project was based on my discomfort of using Strudel software as I have never made music before, so I was hyperfixated on 
+          the perfect sound which would often stop me from learning. As a result I thought to curate a project where the audience can influence the music by sending voice notes,
+          to play on the idea/ remind me I have no control over the situation and push myself to use the voice notes sent from audience members on the spot. 
+
+          The performances were in collaborative project under the duo name of "Shalisha" </p>
+        <div class="line"></div>
+
+        <section id = "tools">
+          <h3>Duration</h3>   
+          <p> 22 July 2025 -  17 October 2025</p>
+        </section>
+
+        <section id = "tools">
+          <h3>Tools</h3>
+          <p>Strudel, Hydra, Python</p>
+        </section>
+
+        <section id = "tools">
+          <h3>Category</h3>
+          <p>Live Coding, SQLite</p>
+        </section>
+
+         <section id = "tools">
+          <h3>Collaborators</h3>
+          <p>Shaan Reshi</p>
+        </section>
+
+        <section id = "tools">
+          <h3>Role </h3>
+          <p>Collectively curated sound and visuals. Built program to collect and convert audience voice messages </p>
+        </section>
+         
+    </section>
+
+    <div id="r-explain">
+      <h2> Visuals</h2>
+      <div class="carousel" data-flickity='{ "wrapAround": true }'>
+         <div class="carousel-cell"><img class="h-48 w-96 object-cover ..." src="../images/musicxcode/mc_5.JPEG"></div>
+        <div class="carousel-cell"><img class="h-48 w-96 object-cover ..." src="../images/musicxcode/mc_1.JPEG"> </div>
+       <video class="carousel-cell" autoplay loop muted><source src="../images/musicxcode/compress.mp4" type="video/mp4"/></video>
+        <div class="carousel-cell"><img class="h-48 w-96 object-cover ..." src="../images/musicxcode/mc_2.JPEG"></div>
+        <div class="carousel-cell"><img class="h-48 w-96 object-cover ..." src="../images/musicxcode/mc3.JPEG"></div>
+        <div class="carousel-cell"><img class="h-48 w-96 object-cover ..." src="../images/musicxcode/IMG_2031.JPEG"></div>
+      </div>
+      
+    </div>
+    <div id="r-explain">
+      <h2>Process</h2>
+      I developed a Python program that automates the collection and conversion of voice messages from my personal iMessage database, so it can used in Strudel. I first wrote and tested an SQL query in DB Browser for SQLite to retrieve a specific number of the most recent received voice messages, ordered by date. After this process, 
+      I implemented it within the program using Python’s sqlite3, os, pathlib, and shutil modules to access and copy files directly from my iMessage database.
+       The program extracts information such as sender phone number, message date, file type, and timestamp, using this information to create unique filenames for each message. Finally, the script automatically converts .caf audio files into .wav format while accepting .m4a files as-is, then transfers all processed files to a designated folder.
+    </div>
+
+   
+    
+  </section>
+ 
+</body>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="main.js"></script>
+<script src="../dating_project/dating_main.js"></script>
+</html>

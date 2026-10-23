@@ -3,7 +3,65 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0px;
   padding: 0px;
+  cursor:none;
 }
+
+/*cursor*/
+
+.cursor{
+  width:4em;
+  height: 4em;
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  pointer-events: none;
+ 
+  transition: opacity 0.15s ease-out, transform 0.1s ease-out;
+}
+
+.select{
+  width:2em;
+  height: 2em;
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  pointer-events: none;
+  transition: opacity 0.15s ease-out, transform 0.1s ease-out;
+
+}
+/* Three.js background */
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.landing-slide {
+  
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.landing-slide .webgl {
+  position: absolute;
+  inset: 0;
+   width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.landing-slide .landing-txt {
+  position: relative;
+  z-index: 1;
+}
+
 
 /************* NAVIGATION ****************/
 #homepage{
@@ -80,7 +138,8 @@ ul li {
 }
 /*Navbar shadpw*/
 .additional{
-  background-color: #f9ed81;
+   background-color: #d6c4d6 ; 
+
 
   box-shadow: 0 5px 5px rgba(0,0,0,0.1) ;
   transition: box-shadow 0.5s ease;
@@ -147,7 +206,9 @@ input[type="checkbox"]:checked ~ span:nth-of-type(2){
 /*** Seperate pages ***/
 .main-container{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  
 }
 
 .slides{
@@ -156,8 +217,9 @@ input[type="checkbox"]:checked ~ span:nth-of-type(2){
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f7eb87;
+   background-color: #d6c4d6 ; 
   position: relative;
+   
   
   
 }

@@ -1,0 +1,275 @@
+@import url(../main_design.css);
+
+/*Container Styling
+.container {
+  position: relative;
+  padding-top: 60px; /* Space for fixed navbar 
+}*/
+
+*{
+  cursor: default;
+}
+
+.container{
+  overflow: visible;
+  margin-bottom: 50px;
+}
+
+/* Button Organization */
+.organisation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.organisation button {
+  padding: 10px 15px;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.organisation button:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-1px);
+}
+
+/* Keeping the indicate buttons exactly as in the original CSS */
+#indicate {
+  display: flex;
+  justify-content: space-between;
+  position:static;
+  z-index: 1;
+  width: 100%;
+
+}
+
+#l-btn {
+  rotate: -130deg;
+  animation: indicate 10s ease infinite;
+  border: transparent;
+  background-color: transparent;
+}
+
+#l-btn:active {
+  opacity: 0.5;
+}
+
+#r-btn {
+  rotate: 50deg;
+  animation: indicate 10s ease infinite;
+  border: transparent;
+  background-color: transparent;
+}
+
+#r-btn:active {
+  opacity: 0.5;
+}
+
+@keyframes indicate {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);
+    scale: 100%;
+  }
+  10% {
+    scale: 80%;
+  }
+  15% {
+    scale: 75%;
+  }
+  25% {
+    scale: 85%;
+  }
+  100% {
+    transform: translateX(20%) rotate(-10deg);
+  }
+}
+
+/* Card Styling */
+.card {
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 0;
+  max-width: 550px;
+  height: auto; /* Allow content to determine height */
+  min-height: 45em;
+  border-radius: 10px;
+  border: none;
+  cursor: grab;
+  transition: width 0.4s ease, transform 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 0 25px 15px rgb(232, 230, 230);
+  top:20px;
+  margin-bottom: 100px;
+}
+
+.swipe-effect {
+  transition: transform 0.5s;
+}
+
+.swipe-effect.done {
+  display: none;
+}
+
+/* Profile Image */
+#me {
+  clip-path: circle(42%);
+  position: relative;
+  width: 20rem;
+  transform: translateX(30%);
+ 
+}
+
+/* Name Title */
+#name-title {
+  background-color: white;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  text-align: center;
+  width: 230px;
+  font-size: 30px;
+  margin: auto;
+  margin-top: -30px;
+  rotate: -2deg;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding: 5px 0;
+}
+
+/* Mini Icons Section */
+#mini-icons {
+  display: flex;
+  justify-content: center; 
+  gap: 5rem;
+  margin: 15px 0;
+}
+
+#mini-icons i {
+  font-size: 20px;
+}
+
+#mini-icons p {
+  font-size: 15px;
+  margin: 0;
+}
+
+#location, #resume {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#resume {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#resume:hover {
+  transform: translateY(-2px);
+}
+
+/* About Text */
+#about-txt {
+  padding-left : 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-top:-5px;
+  line-height: 1.6;
+  font-size: 16px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+  
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+ 
+
+  #indicate {
+    display: none;
+  }
+  
+  .organisation {
+    position:static;
+    left: 0;
+   
+    width: 100%;
+    padding: 0 10px;
+    z-index: 4;
+    margin-top: -40px;
+    
+    
+  }
+  
+  .organisation button {
+    width: 45%;
+    padding: 15px 10px;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
+    width:25em
+  }
+  
+  #me {
+    transform: translateX(10%);
+  }
+  
+  #name-title {
+    font-size: 24px;
+    width: 200px;
+  }
+  
+  #mini-icons {
+    gap: 3rem;
+  }
+
+  .organisation {
+    margin-top: 40px;
+  }
+}
+/*
+  #me {
+    transform: translateX(20%);
+  }*/
+
+@media only screen and (max-width: 500px) {
+  #me {
+    
+    max-width: 80%;
+    clip-path: circle(41%);
+  }
+
+  
+  #mini-icons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .card {
+    padding-bottom: 20px;
+  }
+}

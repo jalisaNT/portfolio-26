@@ -1,0 +1,431 @@
+@import url(../main_design.css);
+
+*{
+  line-height: 1.6;
+  box-sizing: border-box;
+  font-weight: 300;
+
+  cursor: default;
+}
+
+h1{
+  font-size: clamp(22px, 5vw, 35px);
+  width: 100%;
+  font-weight: 300;
+  word-spacing: -5px;
+  margin-top: 20px;
+}
+
+h2,h3{
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.main-c{
+  padding: 2em;
+  margin: 1em;
+  margin-top: 0.3em;
+  max-width: 100%;
+  
+}
+
+.intro-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px dotted rgb(51, 86, 45); 
+  margin-bottom: 20px;
+  max-width: 110em;
+  margin: auto;
+  margin-bottom: 50px;
+  transition: flex-direction 0.3s ease;
+  top: -40px; 
+  
+}
+
+#left-side {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: width 0.3s ease; 
+}
+
+.line{
+  display: block;
+  height: 1em;
+  border: 0;
+  border-top: 1px solid;
+  width: 100%;
+}
+
+#right-side{
+  padding: 1em 3em;
+  flex: 1;
+  min-width: 300px;
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+
+#tools{
+  color: rgb(34, 66, 50)
+}
+
+#brief{
+  font-size: 18px;
+  padding: 0.7em; 
+  margin-top: -1em;
+ 
+}
+
+/* Added container styling to limit width to 80% */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  
+}
+
+/* Modified text styling to reduce gaps */
+#r-r-txt, #txt {
+  padding: 0.5em 0; 
+  font-size: 18px;
+  width: 100%;
+  margin: 0;
+  font-weight: 400;
+  
+  margin-left: 5px;
+}
+
+
+
+#row-one{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  justify-content: center;
+  max-width: 100em;
+  margin: 30px auto;
+  position: relative;
+  
+}
+/*
+#row-two {
+  max-width: 90%;
+  border: 2px solid green;
+  margin: auto;
+  
+}
+
+#row-two .row {
+  width: 100%;
+  max-width: 100em;
+  margin: 20px
+}*/
+
+nav, .custom-navbar {
+  box-shadow: none;
+ 
+}
+
+
+/* Enhanced #row-two styling with animations and better visuals */
+#row-two {
+  width: 80%;
+  border: none; /* Remove original border */
+  background: rgb(224, 233, 223); /* Light green background */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(51, 86, 45, 0.2);
+  padding: 20px;
+  margin: 30px auto;
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  
+  /* Gradient border effect */
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, rgb(51, 86, 45), rgb(105, 160, 98), rgb(51, 86, 45));
+    border-radius: 14px;
+    z-index: -1;
+    opacity: 0.8;
+    animation: border-pulse 4s infinite alternate;
+  }
+  
+  /* Scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(51, 86, 45, 0.6) rgba(240, 245, 240, 0.5);
+  
+  /* Webkit scrollbar styling */
+  &::-webkit-scrollbar {
+    height: 10px;
+    display: block;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: rgba(240, 245, 240, 0.5);
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: rgba(51, 86, 45, 0.6);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(51, 86, 45, 0.8);
+  }
+  
+  /* For IE */
+  -ms-overflow-style: scrollbar;
+}
+
+/* For browsers that don't support the & selector syntax */
+#row-two::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, rgb(51, 86, 45), rgb(105, 160, 98), rgb(51, 86, 45));
+  border-radius: 14px;
+  z-index: -1;
+  opacity: 0.8;
+  animation: border-pulse 4s infinite alternate;
+}
+
+#row-two::-webkit-scrollbar {
+  height: 10px;
+  display: block;
+}
+
+
+
+/* Scroll indicator animation */
+#row-two::after {
+  content: "→";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(51, 86, 45, 0.8);
+  background: rgba(255, 255, 255, 0.7);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scroll-hint 2s infinite;
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Animation for the scroll indicator */
+@keyframes scroll-hint {
+  0% { opacity: 0.3; transform: translate(0, -50%); }
+  50% { opacity: 0.8; transform: translate(5px, -50%); }
+  100% { opacity: 0.3; transform: translate(0, -50%); }
+}
+
+/* Animation for the border pulse */
+@keyframes border-pulse {
+  0% { opacity: 0.5; }
+  100% { opacity: 0.9; }
+}
+
+/* Style for media items inside row-two */
+#row-two #row-two-media {
+  max-width: 80%;
+  height: auto;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for media items */
+#row-two #row-two-media:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Optional: fade-in animation for media items */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#row-two #row-two-media {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+/* For the first image, delay animation slightly */
+#row-two #row-two-media:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+/* For the second image, delay animation more */
+#row-two #row-two-media:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+/* Adjust for smaller screens */
+@media screen and (max-width: 1200px) {
+  #row-two {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #row-two::after {
+    display: none; /* Hide scroll indicator on mobile */
+  }
+}
+
+#row-two .row {
+  width: 100%;
+  
+  justify-content: center;
+  margin: auto;
+ 
+}
+
+#row-two video, #row-two img {
+  max-width: 80%;
+  height: auto;
+  margin: 20px;
+}
+
+#row-two h2 {
+  
+  margin-left: 2%;
+}
+
+#r-explain{
+  margin-left: 5px;
+  margin: auto;
+  max-width: 100em;
+}
+
+#R_full_video{
+  max-width: 100%; 
+  height: auto;
+  flex: 1;
+  object-fit: cover;
+  width: 1020px;
+  height: 640px;
+  
+}
+
+#micro-garden{
+  max-width: 100%;
+  height: auto;
+  object-fit:contain;
+  margin: auto;
+  width: 400px;
+  height: 520px;
+}
+
+#row-two-media{
+  width:800px;
+  height: auto;
+}
+
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  .intro-container {
+    flex-direction: column;
+    /* margin-top: -100px; */
+  }
+  #left-side {
+    width: 60%;
+    margin: auto;
+  }
+  #right-side {
+    width: 100%;
+    padding: 1em;
+  }
+  .main-c {
+    margin: 6em 0.5em 0.5em 0.5em;
+    padding: 1em;
+  }
+  h1 {
+    width: 100%;
+  }
+  #brief, #r-r-txt, #txt {
+    font-size: 18px;
+  }
+  #row-one {
+    flex-direction: column;
+  }
+
+  
+  #micro-garden {
+    width: 380px;
+    height: 400px;
+  }
+  
+  /* Adjust container width for smaller screens */
+  .container {
+    width: 95%;
+  }
+
+  #row-two {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #left-side {
+    width: 65%; /* Gradual increase */
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #left-side {
+    width: 70%;
+  }
+
+  
+}
+
+@media screen and (max-width: 950px) {
+  #left-side {
+    width: 80%; /* Added intermediate step */
+  }
+
+   /* .intro-container {
+    /* margin-top: -80px; */
+  
+  
+}
+
+@media screen and (max-width: 900px) {
+  #left-side {
+    width: 90%;
+  }
+
+  .intro-container {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #left-side {
+    width: 95%; /* Added intermediate step */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #left-side {
+    width: 100%;
+  }
+}
